@@ -6,30 +6,27 @@ on:
       - published 
 
 jobs:
-  sync-refs:
+  harmonizer:
+    name: 🔃 Run Harmonizer
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
       matrix:
-        #? https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
         include:
           - ref-type: tag
-            sync-to: none
-            prefix: prefix
-            suffix: -suffix
+            sync-to: major
+            prefix: v
           - ref-type: branch
-            sync-to: all
+            sync-to: major
             prefix: releases/v
-            suffix: ''
     steps:
       - name: 🗃️ Checkout
         uses: actions/checkout@v3
 
-      - name: 🔃 Run Harmonizer
+      - name: 🔃 Sync Tag
         uses: ./
         with:
           github-token: ${{ secrets.CI_SEMANTIC_RELEASE }}
           ref-type: ${{ matrix.ref-type }}
           sync-to: ${{ matrix.sync-to }}
           prefix: ${{ matrix.prefix }}
-          suffix: ${{ matrix.suffix }}

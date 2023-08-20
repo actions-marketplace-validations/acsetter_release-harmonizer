@@ -5,11 +5,11 @@ branding:
   icon: refresh-cw
   color: green
 description: |
-  After a versioned release is creted, this action creates/updates refs
-  (branches and/or tags) to the head commit of the new release. The tag
-  associated with the release must be the version number optionally prefixed
-  with a 'v'. For example, 'v1.2.3', '1.2.3', '2.1', and 'v2.1' are all
-  acceptble tags to sync with.
+  After a release is creted, this action creates/updates branches and/or tags
+  that point to the head commit of the new release. If you wish to include a
+  version number in the new ref, the published release's tag must include a
+  version number. For example, 'v1.2.3', '1.2.3', '2.1-beta', and
+  'v2.1.3.6-alpha' are all acceptble tags to sync with.
 
 inputs:
   github-token:
@@ -27,15 +27,16 @@ inputs:
     default: 'major'
     required: false
     description: |
-      ('major' | 'minor' | 'patch' | 'all' | 'none') Determines how refs are
+      ('major' | 'minor' | 'patch' | 'full' | 'all') Determines how refs are
       synced with the release. For example, if 'major' is specified, versions
       starting at 1.0.0 and up to, but not including, 2.0.0 will be synced to
-      the same ref. Versions higher than 2.0.0 will create a new ref.
-       - 'major' syncs [1.0.0, 2.0.0)
-       - 'minor' syncs [1.1.0, 1.2.0)
-       - 'patch' syncs [2.0.1, 2.0.2)
-       - 'all' creates a new ref every version bump
-       - 'none' syncs to a ref made of prefixes and/or suffixes with no version
+      the same ref. Versions higher than 2.0.0 will create a new ref. Default
+      is 'major'.
+       - 'major' syncs releases [1.0.0, 2.0.0) to the ref '<prefix>1<suffix>'
+       - 'minor' syncs releases [1.1.0, 1.2.0) to the ref '<prefix>1.1<suffix>'
+       - 'patch' syncs releases [2.0.1, 2.0.2) to the ref '<prefix>2.0.1<suffix>'
+       - 'full' syncs release '1.2.3.4' to the ref '<prefix>1.2.3.4<suffix>'
+       - 'all' syncs all releases to the ref '<prefix><suffix>'
 
   prefix:
     default: 'v'

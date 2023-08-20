@@ -19,7 +19,7 @@ module.exports = ({github, context, core, inputs}) => {
       case 'patch':
         version = fullVersion[0].match(/(\d+\.){2}\d+/);
         break;
-      case 'all':
+      case 'full':
         version = fullVersion;
         break;
     }
@@ -75,7 +75,7 @@ module.exports = ({github, context, core, inputs}) => {
     core.setFailed(`Invalid input for 'ref-type'.\nExpected: 'branch' or 'tag'\nActual: ${inputs.refType}`);
   }
 
-  if (inputs.syncTo.toLowerCase() !== 'none') {
+  if (inputs.syncTo.toLowerCase() !== 'all') {
     ref += buildTagVersion();
   }
 
