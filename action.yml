@@ -71,6 +71,6 @@ runs:
             context,
             core,
             sha: `${{ env.SHA }}`,
-            inputs
+            inputs: `${{ inputs }}`
           });
           
