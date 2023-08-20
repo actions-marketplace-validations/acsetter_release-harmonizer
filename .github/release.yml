@@ -1,0 +1,34 @@
+name: 🚛 Semantic Release
+
+on:
+  push:
+    branches:
+      - main
+      - releases/v*
+
+jobs:
+  release:
+    run-on: ubuntu-latest
+    steps:
+      - name: 🗃️ Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: 🏗️ Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: 💾 Install Dependencies
+        run: npm clean Install
+
+      - name: 🕵️ Verify Attestations and Registry Signatures for Dependencies
+        run: npm audit Signatures
+
+      - name: 🏁 Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.CI_SEMANTIC_RELEASE }}
+          NPM_TOKEN: ${{ secrets.CI_SEMANTIC_RELEASE }}
+        run: npx semantic-release

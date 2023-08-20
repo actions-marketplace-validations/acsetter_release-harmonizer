@@ -1,0 +1,71 @@
+# https://docs.github.com/en/get-started/using-git/dealing-with-special-characters-in-branch-and-tag-names
+name: Release Harmonizer
+author: Aaron Csetter (aaron@csetter.com)
+branding:
+  icon: refresh-cw
+  color: green
+description: |
+  After a versioned release is creted, this action creates/updates refs
+  (branches and/or tags) to the head commit of the new release. The tag
+  associated with the release must be the version number optionally prefixed
+  with a 'v'. For example, 'v1.2.3', '1.2.3', '2.1', and 'v2.1' are all
+  acceptble tags to sync with.
+
+inputs:
+  github-token:
+    default: ${{ github.token }}
+    required: false
+    description: |
+      The GitHub token used to create an authenticated client.
+
+  ref-type:
+    required: true
+    description: |
+      ('tag' | 'branch') which type of ref to sync.
+
+  sync-to:
+    default: 'major'
+    required: false
+    description: |
+      ('major' | 'minor' | 'patch' | 'all' | 'none') Determines how refs are
+      synced with the release. For example, if 'major' is specified, versions
+      starting at 1.0.0 and up to, but not including, 2.0.0 will be synced to
+      the same ref. Versions higher than 2.0.0 will create a new ref.
+       - 'major' syncs [1.0.0, 2.0.0)
+       - 'minor' syncs [1.1.0, 1.2.0)
+       - 'patch' syncs [2.0.1, 2.0.2)
+       - 'all' creates a new ref every version bump
+       - 'none' syncs to a ref made of prefixes and/or suffixes with no version
+
+  prefix:
+    default: 'v'
+    required: false
+    description: |
+      (string) The prefix for the ref-name. For example, the prefeix 'foo/bar'
+      would produce branches 'foo/bar1', 'foo/bar2', and 'foo/bar3' when synced
+      to major with a ref-type of 'branches'.
+
+  suffix:
+    default: ''
+    required: false
+    description: |
+      (string) The suffix for the ref-name. For example, the suffix -latest
+      would produce refs 'v1.0-latest', 'v1.1-latest', and 'v2.2-latest'
+      when synced to minor with the prefix 'v'.
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/github-script@v6
+      with:
+        github-token: ${{ inputs.github-token }}
+        script: |
+          const script = require(`${GITHUB_ACTION_PATH}/index.js`);
+          script({
+            github,
+            context,
+            core,
+            sha: `${{ env.SHA }}`,
+            inputs
+          });
+          

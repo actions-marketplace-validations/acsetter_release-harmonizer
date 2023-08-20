@@ -1,0 +1,23 @@
+name: 🏷️ Sync Refs
+
+on:
+  release:
+    types: [publish] 
+
+jobs:
+  sync-refs:
+    run-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        #? https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
+        ref-type: [tag, branch]
+        prefix: [v, releases/v]
+    steps:
+      - name: 🔃 Run Harmonizer
+        uses: ./
+        with:
+          github-token: ${{ secrets.CI_SEMANTIC_RELEASE }}
+          ref-type: ${{ matrix.ref-type }}
+          sync-to: major
+          prefix: ${{ matrix.prefix }}
