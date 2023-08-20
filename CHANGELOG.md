@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.0.3](https://github.com/acsetter/release-harmonizer/compare/v1.0.2...v1.0.3) (2023-08-20)
+
+
+### Bug Fixes
+
+* step output in action ([a1422f8](https://github.com/acsetter/release-harmonizer/commit/a1422f84a2aab080ecb749198cd901ba6b78a501))
+
 ## [1.0.2](https://github.com/acsetter/release-harmonizer/compare/v1.0.1...v1.0.2) (2023-08-20)
 
 
