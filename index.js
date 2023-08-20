@@ -42,7 +42,7 @@ module.exports = ({github, context, core, inputs}) => {
       owner: context.repo.owner,
       repo: context.repo.repo,
       ref,
-      sha
+      sha: context.sha
     }).catch(error => {
       if (error.status === 422) {
         github.rest.git.createRef({
