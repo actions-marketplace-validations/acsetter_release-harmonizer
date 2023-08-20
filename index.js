@@ -7,12 +7,11 @@ module.exports = ({github, context, core, inputs}) => {
       core.setFailed(errMessage);
       throw Error(errMessage)
     }
-    var versionSections = fullVersion[0].split('.');
     var version = undefined
 
     switch (inputs.syncTo.toLowerCase()) {
       case 'major':
-        version = versionSections[0];
+        version = fullVersion[0].match(/\d+/);
         break;
       case 'minor':
         version = fullVersion[0].match(/(\d+\.){1}\d+/);
@@ -21,7 +20,7 @@ module.exports = ({github, context, core, inputs}) => {
         version = fullVersion[0].match(/(\d+\.){2}\d+/);
         break;
       case 'all':
-        version = fullVersion;
+        version = [fullVersion];
         break;
     }
 
@@ -42,7 +41,7 @@ module.exports = ({github, context, core, inputs}) => {
       throw Error(errMessage);
     }
     
-    return version;
+    return version[0];
   }
 
   async function syncRef(ref) {
