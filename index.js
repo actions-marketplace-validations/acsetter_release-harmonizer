@@ -71,5 +71,9 @@ module.exports = ({github, context, core, inputs}) => {
     ref += buildTagVersion();
   }
 
-  syncRef(`${ref}${inputs.suffix}`)
+  console.log(inputs.prefix)
+  console.log(ref)
+  console.log(inputs.suffix)
+
+  // syncRef(`${ref}${inputs.suffix}`)
 }
