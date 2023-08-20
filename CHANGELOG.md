@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+# [1.1.0](https://github.com/acsetter/release-harmonizer/compare/v1.0.10...v1.1.0) (2023-08-20)
+
+
+### Features
+
+* implemented ref syncing ([40a9c41](https://github.com/acsetter/release-harmonizer/commit/40a9c41abf973a846bd72b35e07133d9f0ce291d))
+
 ## [1.0.10](https://github.com/acsetter/release-harmonizer/compare/v1.0.9...v1.0.10) (2023-08-20)
 
 
