@@ -14,9 +14,13 @@ jobs:
         #? https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
         include:
           - ref-type: tag
+            sync-to: minor
             prefix: v
+            suffix: -beta
           - ref-type: branch
+            sync-to: patch
             prefix: releases/v
+            suffix: -beta
     steps:
       - name: 🗃️ Checkout
         uses: actions/checkout@v3
