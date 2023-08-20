@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.1.1](https://github.com/acsetter/release-harmonizer/compare/v1.1.0...v1.1.1) (2023-08-20)
+
+
+### Bug Fixes
+
+* suffix ref in script ([8f85daa](https://github.com/acsetter/release-harmonizer/commit/8f85daaeafd503c0b8186684643da0d41a75fe14))
+
 # [1.1.0](https://github.com/acsetter/release-harmonizer/compare/v1.0.10...v1.1.0) (2023-08-20)
 
 
