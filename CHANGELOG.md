@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.0.2](https://github.com/acsetter/release-harmonizer/compare/v1.0.1...v1.0.2) (2023-08-20)
+
+
+### Bug Fixes
+
+* ref to action path ([45e15d2](https://github.com/acsetter/release-harmonizer/commit/45e15d2b9dea8cc59d62f35e280d784baf64193b))
+
 ## [1.0.1](https://github.com/acsetter/release-harmonizer/compare/v1.0.0...v1.0.1) (2023-08-20)
 
 
