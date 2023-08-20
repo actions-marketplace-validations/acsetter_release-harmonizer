@@ -15,10 +15,10 @@ module.exports = ({github, context, core, inputs}) => {
         version = versionSections[0];
         break;
       case 'minor':
-        version = versionSections[1];
+        version = fullVersion[0].match(/(\d+\.){1}\d+/);
         break;
       case 'patch':
-        version = versionSections[2];
+        version = fullVersion[0].match(/(\d+\.){2}\d+/);
         break;
       case 'all':
         version = fullVersion;
@@ -29,6 +29,15 @@ module.exports = ({github, context, core, inputs}) => {
       var errMessage = `Invalid input for 'sync-to'.\n
           Expected: 'major' | 'minor' | 'patch' | 'all' | 'none'\n
           But got: '${inputs.syncTo}'`;
+      core.setFailed(errMessage);
+      throw Error(errMessage);
+    }
+
+    if (version === null) {
+      var errMessage = `Cannot sync-to '${inputs.syncTo}' because the version '${fullVersion}' 
+        from the workflow context's ref '${context.ref}' has too few version sections.\n
+        For reference: '1.2.3' translates to '<major>.<minor>.<patch>'.\n 
+        If you believe this is a bug in the source code, please report via an opened issue in the repo.`;
       core.setFailed(errMessage);
       throw Error(errMessage);
     }
