@@ -60,7 +60,7 @@ runs:
       with:
         github-token: ${{ inputs.github-token }}
         script: |
-          const script = require(`${GITHUB_ACTION_PATH}/index.js`);
+          const script = require(`${{ env.GITHUB_ACTION_PATH }}/index.js`);
           script({
             github,
             context,
