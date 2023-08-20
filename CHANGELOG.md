@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.0.4](https://github.com/acsetter/release-harmonizer/compare/v1.0.3...v1.0.4) (2023-08-20)
+
+
+### Bug Fixes
+
+* syntax error in output ([2011af4](https://github.com/acsetter/release-harmonizer/commit/2011af44c8807cade68cb782e4a951a6dc131c4e))
+
 ## [1.0.3](https://github.com/acsetter/release-harmonizer/compare/v1.0.2...v1.0.3) (2023-08-20)
 
 
