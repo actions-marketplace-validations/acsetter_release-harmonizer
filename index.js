@@ -1,5 +1,8 @@
 module.exports = ({github, context, core, sha, inputs}) => {
   console.log(`inputs: ${inputs}`)
+  var test = core.getInput('prefix');
+  console.log(test)
+  console.log(inputs.prefix)
   async function syncRef(ref) {
     core.info(`Updating ref: ${{}}`)
     github.rest.git.updateRef({
