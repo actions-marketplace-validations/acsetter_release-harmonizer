@@ -1,2 +1,5 @@
-# Folders to ignore
+# Dependency directory
+node_modules
+
+# IDE project config directory
 .vscode/
