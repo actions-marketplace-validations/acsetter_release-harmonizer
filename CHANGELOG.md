@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.1.3](https://github.com/acsetter/release-harmonizer/compare/v1.1.2...v1.1.3) (2023-08-20)
+
+
+### Bug Fixes
+
+* sha ref again ([e54fb3a](https://github.com/acsetter/release-harmonizer/commit/e54fb3acc3b9bed52664773ff80a369330665e31))
+
 ## [1.1.2](https://github.com/acsetter/release-harmonizer/compare/v1.1.1...v1.1.2) (2023-08-20)
 
 
