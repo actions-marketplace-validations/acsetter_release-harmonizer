@@ -20,7 +20,7 @@ module.exports = ({github, context, core, inputs}) => {
         version = fullVersion[0].match(/(\d+\.){2}\d+/);
         break;
       case 'all':
-        version = [fullVersion];
+        version = fullVersion;
         break;
     }
 
