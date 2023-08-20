@@ -71,6 +71,10 @@ runs:
             context,
             core,
             sha: `${{ env.SHA }}`,
-            inputs: `${{ inputs }}`
+            inputs: {
+              refType: `${{ inputs.ref-type }}`,
+              syncTo: `${{ inputs.sync-to }}`,
+              prefix: `${{ inputs.prefix }}`,
+              prefix: `${{ inputs.suffix }}`,
+            }
           });
-          

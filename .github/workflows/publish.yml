@@ -12,8 +12,11 @@ jobs:
       fail-fast: true
       matrix:
         #? https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
-        ref-type: [tag, branch]
-        prefix: [v, releases/v]
+        include:
+          - ref-type: tag
+            prefix: v
+          - ref-type: branch
+            prefix: releases/v
     steps:
       - name: 🗃️ Checkout
         uses: actions/checkout@v3
