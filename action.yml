@@ -70,7 +70,6 @@ runs:
             github,
             context,
             core,
-            sha: `${{ env.SHA }}`,
             inputs: {
               refType: `${{ inputs.ref-type }}`,
               syncTo: `${{ inputs.sync-to }}`,

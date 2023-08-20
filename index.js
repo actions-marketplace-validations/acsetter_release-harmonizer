@@ -1,4 +1,4 @@
-module.exports = ({github, context, core, sha, inputs}) => {
+module.exports = ({github, context, core, inputs}) => {
   function buildTagVersion() {
     var fullVersion = context.ref.match(/\d+(\.\d+)*/); // 'refs/tags/v1.23.4-beta' --> '1.23.4'
     if (fullVersion === null) {
@@ -49,7 +49,7 @@ module.exports = ({github, context, core, sha, inputs}) => {
           owner: context.repo.owner,
           repo: context.repo.repo,
           ref: `refs/${ref}`,
-          sha
+          sha: context.sha
         });
       } else {
         core.setFailed(`${error.status}: ${error.message}`);
