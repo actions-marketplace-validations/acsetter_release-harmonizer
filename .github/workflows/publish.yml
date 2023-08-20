@@ -15,6 +15,9 @@ jobs:
         ref-type: [tag, branch]
         prefix: [v, releases/v]
     steps:
+      - name: 🗃️ Checkout
+        uses: actions/checkout@v3
+
       - name: 🔃 Run Harmonizer
         uses: ./
         with:
