@@ -15,12 +15,12 @@ jobs:
         include:
           - ref-type: tag
             sync-to: minor
-            prefix: v
+            prefix: /v
             suffix: -beta
           - ref-type: branch
-            sync-to: patch
+            sync-to: all
             prefix: releases/v
-            suffix: -beta
+            suffix: -alpha
     steps:
       - name: 🗃️ Checkout
         uses: actions/checkout@v3
