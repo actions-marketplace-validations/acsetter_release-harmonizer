@@ -1,7 +1,26 @@
 module.exports = ({github, context, core, sha, inputs}) => {
-  var test = core.getInput('prefix');
-  console.log(test)
-  console.log(JSON.stringify(inputs))
+  console.log(JSON.stringify(context));
+  // var version = ''
+
+  // if (inputs.syncTo === 'major') {
+
+  // }
+
+
+  // var ref = '';
+
+  // if (inputs.refType === 'tag') {
+  //   ref = `tags/${inputs.prefix}`;
+  // } else if (inputs.refType === 'branch') {
+  //   ref = `heads/${inputs.prefix}`;
+  // } else {
+  //   core.setFailed(`Invalid input for 'ref-type'.\nExpected: 'branch' or 'tag'\nActual: ${inputs.refType}`);
+  // }
+
+  // function formatVersionTag() {
+  //   var tag = github.event.release.tag_name;
+  // }
+
   async function syncRef(ref) {
     core.info(`Updating ref: ${{}}`)
     github.rest.git.updateRef({
