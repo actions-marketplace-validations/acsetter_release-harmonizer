@@ -1,4 +1,4 @@
-# Release Harmoizer
+# Release Harmonizer
 
 ## Usage
 ```yaml
