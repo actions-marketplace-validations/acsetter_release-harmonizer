@@ -56,11 +56,16 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Get script file path
+      id: script-path
+      shell: bash
+      run: echo "path=${GITHUB_ACTION_PATH}/index.js" >> $GITUHB_OUTPUT
+    
     - uses: actions/github-script@v6
       with:
         github-token: ${{ inputs.github-token }}
         script: |
-          const script = require(`${{ env.GITHUB_ACTION_PATH }}/index.js`);
+          const script = require(`${{ steps.script-path.outputs.path }}/index.js`);
           script({
             github,
             context,
