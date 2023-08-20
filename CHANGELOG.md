@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.1.6](https://github.com/acsetter/release-harmonizer/compare/v1.1.5...v1.1.6) (2023-08-20)
+
+
+### Bug Fixes
+
+* suffix input in script call ([98355c3](https://github.com/acsetter/release-harmonizer/commit/98355c349e90b707e0d3c9ae49afa9c89d08480e))
+
 ## [1.1.5](https://github.com/acsetter/release-harmonizer/compare/v1.1.4...v1.1.5) (2023-08-20)
 
 
