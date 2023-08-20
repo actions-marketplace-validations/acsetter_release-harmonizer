@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.0.8](https://github.com/acsetter/release-harmonizer/compare/v1.0.7...v1.0.8) (2023-08-20)
+
+
+### Bug Fixes
+
+* inputs test ([1bffd2a](https://github.com/acsetter/release-harmonizer/commit/1bffd2acb3e987874f10554886e7ce8f9160196d))
+
 ## [1.0.7](https://github.com/acsetter/release-harmonizer/compare/v1.0.6...v1.0.7) (2023-08-20)
 
 
