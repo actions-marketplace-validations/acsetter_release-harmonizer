@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.0.1](https://github.com/acsetter/release-harmonizer/compare/v1.0.0...v1.0.1) (2023-08-20)
+
+
+### Bug Fixes
+
+* added checkout step to publish workflow ([a283756](https://github.com/acsetter/release-harmonizer/commit/a283756ff1e2d90cb24df736e697e290a0b13988))
+
 # 1.0.0 (2023-08-20)
 
 
