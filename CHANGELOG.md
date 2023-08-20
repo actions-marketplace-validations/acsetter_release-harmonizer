@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.0.6](https://github.com/acsetter/release-harmonizer/compare/v1.0.5...v1.0.6) (2023-08-20)
+
+
+### Bug Fixes
+
+* inputs ref in action ([f3c4cdb](https://github.com/acsetter/release-harmonizer/commit/f3c4cdb5411afd6597f078085cfdd742b5c7a718))
+
 ## [1.0.5](https://github.com/acsetter/release-harmonizer/compare/v1.0.4...v1.0.5) (2023-08-20)
 
 
