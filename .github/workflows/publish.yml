@@ -30,5 +30,6 @@ jobs:
         with:
           github-token: ${{ secrets.CI_SEMANTIC_RELEASE }}
           ref-type: ${{ matrix.ref-type }}
-          sync-to: major
+          sync-to: ${{ matrix.sync-to }}
           prefix: ${{ matrix.prefix }}
+          suffix: ${{ matrix.suffix }}
