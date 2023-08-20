@@ -65,7 +65,7 @@ runs:
       with:
         github-token: ${{ inputs.github-token }}
         script: |
-          const script = require(`${{ steps.script-path.outputs.path }}/index.js`);
+          const script = require(`${{ steps.script-path.outputs.path }}`);
           script({
             github,
             context,
