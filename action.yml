@@ -74,6 +74,6 @@ runs:
               refType: `${{ inputs.ref-type }}`,
               syncTo: `${{ inputs.sync-to }}`,
               prefix: `${{ inputs.prefix }}`,
-              prefix: `${{ inputs.suffix }}`,
+              suffix: `${{ inputs.suffix }}`,
             }
           });
