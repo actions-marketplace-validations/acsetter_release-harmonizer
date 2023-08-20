@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.0.7](https://github.com/acsetter/release-harmonizer/compare/v1.0.6...v1.0.7) (2023-08-20)
+
+
+### Bug Fixes
+
+* test inputs in script ([fdb4c11](https://github.com/acsetter/release-harmonizer/commit/fdb4c11c05ab2ac66194f6e7c303ad3615483e1e))
+
 ## [1.0.6](https://github.com/acsetter/release-harmonizer/compare/v1.0.5...v1.0.6) (2023-08-20)
 
 
