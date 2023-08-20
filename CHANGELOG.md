@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.1.9](https://github.com/acsetter/release-harmonizer/compare/v1.1.8...v1.1.9) (2023-08-20)
+
+
+### Bug Fixes
+
+* logical errors in script ([cfea1bb](https://github.com/acsetter/release-harmonizer/commit/cfea1bbb34fb5a247ea7ffd974378e605c33e0e0))
+
 ## [1.1.8](https://github.com/acsetter/release-harmonizer/compare/v1.1.7...v1.1.8) (2023-08-20)
 
 
