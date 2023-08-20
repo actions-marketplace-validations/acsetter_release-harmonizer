@@ -2,11 +2,12 @@ name: 🏷️ Sync Refs
 
 on:
   release:
-    types: [publish] 
+    types: 
+      - published 
 
 jobs:
   sync-refs:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: true
       matrix:
