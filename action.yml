@@ -59,7 +59,7 @@ runs:
     - name: Get script file path
       id: script-path
       shell: bash
-      run: echo "path=${GITHUB_ACTION_PATH}/index.js" >> $GITUHB_OUTPUT
+      run: echo "path=${GITHUB_ACTION_PATH}/index.js" >> $GITHUB_OUTPUT
     
     - uses: actions/github-script@v6
       with:
