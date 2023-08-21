@@ -1,5 +1,5 @@
-# Release Harmonizer
-A GitHub Action that syncs branches and/or tags to a published release. After a release is creted, this action creates/updates branches and/or tags that point to the head commit of the new release. If you wish to include a version number in the new ref, the published release's tag must include a version number. For example, 'v1.2.3', '1.2.3', '2.1-beta', and 'v2.1.3.6-alpha' are all acceptble tags to sync with.
+# 🎬 Release Harmonizer
+A GitHub Action that syncs branches and/or tags to the head commit (sha) of a published release. If you wish to include a version number in the new ref, the published release's tag must include a version number. For example, 'v1.2.3', '1.2.3', '2.13-beta', and 'v6.9.4.20-alpha' are all acceptble tags to sync with.
 
 > [!IMPORTANT]
 > This action is only meant to be consumed in a workflow that is triggered by a publish event. [Learn more](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows).
@@ -22,7 +22,7 @@ jobs:
 
           # ('tag' | 'branch') which type of ref to sync.
           ref-type: ''
-          
+
           # ('major' | 'minor' | 'patch' | 'full' | 'all') Determines how refs are
           # synced with the release. For example, if 'major' is specified, versions
           # starting at 1.0.0 and up to, but not including, 2.0.0 will be synced to
