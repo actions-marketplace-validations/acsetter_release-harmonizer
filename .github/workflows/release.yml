@@ -19,10 +19,13 @@ jobs:
       - name: 🏗️ Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version: 20.x
 
       - name: 💾 Install Dependencies
-        run: npm clean-install
+        run: |
+          npm install @semantic-release/changelog -D &&
+          npm install @semantic-release/git -D &&
+          npm clean-install
 
       - name: 🕵️ Verify Attestations and Registry Signatures for Dependencies
         run: npm audit Signatures
@@ -31,4 +34,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.CI_SEMANTIC_RELEASE }}
           NPM_TOKEN: ${{ secrets.CI_SEMANTIC_RELEASE }}
-        run: npx semantic-release
+        run: npx semantic-release -d
