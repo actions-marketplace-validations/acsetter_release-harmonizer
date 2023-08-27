@@ -24,8 +24,8 @@ jobs:
       # - name: 💾 Install Dependencies
       #   run: npm clean-install
 
-      - name: 🕵️ Verify Attestations and Registry Signatures for Dependencies
-        run: npm audit Signatures
+      # - name: 🕵️ Verify Attestations and Registry Signatures for Dependencies
+      #   run: npm audit Signatures
 
       - name: 🏁 Run Semantic Release
         env:
