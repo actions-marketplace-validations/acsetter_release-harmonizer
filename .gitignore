@@ -1,5 +1,7 @@
-# Dependency directory
+# NPM stuff from CI
 node_modules
+package.json
+package-lock.json
 
 # IDE project config directory
 .vscode/
