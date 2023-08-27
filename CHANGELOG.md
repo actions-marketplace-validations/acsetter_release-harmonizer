@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.2.2](https://github.com/acsetter/release-harmonizer/compare/v1.2.1...v1.2.2) (2023-08-27)
+
+
+### Bug Fixes
+
+* shortened sction description ([9965e9d](https://github.com/acsetter/release-harmonizer/commit/9965e9dacc5c1fe5a9714c21dc7661b657a70d46))
+
 ## [1.2.1](https://github.com/acsetter/release-harmonizer/compare/v1.2.0...v1.2.1) (2023-08-27)
 
 
