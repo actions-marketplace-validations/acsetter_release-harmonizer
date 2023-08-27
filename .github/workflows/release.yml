@@ -21,11 +21,10 @@ jobs:
         with:
           node-version: 20.x
 
-      # - name: 💾 Install Dependencies
-      #   run: npm clean-install
-
-      # - name: 🕵️ Verify Attestations and Registry Signatures for Dependencies
-      #   run: npm audit Signatures
+      - name: 💾 Install Dependencies
+        run: |
+          npm install -g @semantic-release/changelog
+          npm install -g @semantic-release/git
 
       - name: 🏁 Run Semantic Release
         env:
