@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.2.4](https://github.com/acsetter/release-harmonizer/compare/v1.2.3...v1.2.4) (2023-08-27)
+
+
+### Bug Fixes
+
+* remove npm files ([2df9f6a](https://github.com/acsetter/release-harmonizer/commit/2df9f6ad52933b2af571b1cc7918f37bc999329d))
+
 ## [1.2.3](https://github.com/acsetter/release-harmonizer/compare/v1.2.2...v1.2.3) (2023-08-27)
 
 
