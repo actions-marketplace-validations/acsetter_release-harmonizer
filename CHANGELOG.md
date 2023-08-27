@@ -1,5 +1,12 @@
 # 🪵 Changelog
 
+## [1.2.3](https://github.com/acsetter/release-harmonizer/compare/v1.2.2...v1.2.3) (2023-08-27)
+
+
+### Bug Fixes
+
+* update release workflow ([fb96c18](https://github.com/acsetter/release-harmonizer/commit/fb96c181455e6d372196685ef47063d1ebe8ebb5))
+
 ## [1.2.2](https://github.com/acsetter/release-harmonizer/compare/v1.2.1...v1.2.2) (2023-08-27)
 
 
