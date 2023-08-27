@@ -5,8 +5,7 @@ branding:
   icon: refresh-cw
   color: green
 description: |
-  After a release is creted, this action creates/updates branches and/or tags
-  that point to the head commit of the new release.
+  This action creates/updates branches and/or tags that point to the head commit of a new release.
 
 inputs:
   github-token:
