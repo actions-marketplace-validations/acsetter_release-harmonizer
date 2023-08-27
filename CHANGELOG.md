@@ -1,5 +1,26 @@
 # 🪵 Changelog
 
+# [1.2.0](https://github.com/acsetter/release-harmonizer/compare/v1.1.3...v1.2.0) (2023-08-27)
+
+
+### Bug Fixes
+
+* error in script ([714c44c](https://github.com/acsetter/release-harmonizer/commit/714c44c21ed66a29999006696f42c41a199aab05))
+* errors in script ([0e7b4f1](https://github.com/acsetter/release-harmonizer/commit/0e7b4f1584444c10b81fafb77f370a7eaf08f9bc))
+* logical errors in script ([cfea1bb](https://github.com/acsetter/release-harmonizer/commit/cfea1bbb34fb5a247ea7ffd974378e605c33e0e0))
+* ref error in script ([d762451](https://github.com/acsetter/release-harmonizer/commit/d762451117a4833d7ba36cde24d3b9cc2a3a1104))
+* removed node from src ([b947350](https://github.com/acsetter/release-harmonizer/commit/b947350dabcb88c118ae1dc86824e474eafbb729))
+* suffix input in script call ([98355c3](https://github.com/acsetter/release-harmonizer/commit/98355c349e90b707e0d3c9ae49afa9c89d08480e))
+* test inputs ([8d75ac0](https://github.com/acsetter/release-harmonizer/commit/8d75ac07202c37b1e7a1e98da50019d73c2d40f6))
+* test inputs ([aedaf55](https://github.com/acsetter/release-harmonizer/commit/aedaf55d04468931add36e7e0966b532921bd11f))
+* testing inputs ([ffcd713](https://github.com/acsetter/release-harmonizer/commit/ffcd7136a0f2e55a21df4e629eb1a3557edb33d1))
+* testing inputs ([9bfd81d](https://github.com/acsetter/release-harmonizer/commit/9bfd81d183ae0282d20c4450ba40d2c33a31ad31))
+
+
+### Features
+
+* updated docs and reset version for release ([2a2adc5](https://github.com/acsetter/release-harmonizer/commit/2a2adc54e61b8a2c8866ce48fbe729de4093c42e))
+
 # 1.0.0 (2023-08-20)
 
 
