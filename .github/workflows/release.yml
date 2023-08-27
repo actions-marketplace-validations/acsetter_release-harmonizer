@@ -22,12 +22,10 @@ jobs:
           node-version: 20.x
 
       - name: 💾 Install Dependencies
-        run: |
-          npm install @semantic-release/changelog --save false
-          npm install @semantic-release/git --save false
+        run: npm install -g @semantic-release/changelog @semantic-release/git
 
       - name: 🏁 Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.CI_SEMANTIC_RELEASE }}
           NPM_TOKEN: ${{ secrets.CI_SEMANTIC_RELEASE }}
-        run: npm --location=global install semantic-release semantic-release-export-data
+        run: npx semantic-release
