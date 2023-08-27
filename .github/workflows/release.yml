@@ -23,8 +23,8 @@ jobs:
 
       - name: 💾 Install Dependencies
         run: |
-          npm install @semantic-release/changelog
-          npm install @semantic-release/git
+          npm install @semantic-release/changelog --save false
+          npm install @semantic-release/git --save false
 
       - name: 🏁 Run Semantic Release
         env:
